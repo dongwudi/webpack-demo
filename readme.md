@@ -49,3 +49,6 @@ $ npm run dev
 
 ## c11 devServer
 启动本地服务器`webpack-dev-server` [源码](https://github.com/dongwudi/webpack-demo/tree/master/c11)
+
+## c12 babal-loader
+`babel`处理es6 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c12)
