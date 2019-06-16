@@ -6,10 +6,8 @@ $ node -v
 v10.15.3
 $ npm -v
 6.4.1
-```
-## 安装
-```
-$ cnpm i webpack webpack-cli -D
+$ npx webpack-cli -v
+3.3.4
 $ npx webpack -v
 4.34.0
 ```
@@ -19,128 +17,35 @@ $ cd c1
 $ npm i
 $ npm run dev
 ```
+
 ## c1: entry file
-
-index.js
-```
-var test = 'test';
-
-console.log(test)
-```
-
-webpack.config.js
-```
-const path = require('path');
-
-module.exports = {
-    mode: 'production',
-    entry: './index.js',
-    output: {
-        filename: 'bundle.js'
-    }
-}
-```
-index.html
-```
-<!DOCTYPE html>
-<html lang="en">
-<body>
-    <script src="./dist/bundle.js"></script>
-</body>
-</html>
-```
+单文件入口 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c1)
 
 ## c2: multiple entry files
-webpack.config.js
-```
-module.exports = {
-    mode: 'production',
-    entry: {
-        index1: './src/index1.js',
-        index2: './src/index2.js'
-    },
-    output: {
-        filename: '[name].bundle.js'
-    }
-}
-```
+多文件入口 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c2)
 
 ## c3: file-loader
-webpack.config.js
-```
-const path = require('path');
+处理文件（图片，字体图标）[源码](https://github.com/dongwudi/webpack-demo/tree/master/c3)
 
-module.exports = {
-    mode: 'production',
-    entry: {
-        index: './src/js/index.js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name]_[hash:6].[ext]',
-                            publicPath: './dist/images', //发布目录路径--其实就是打包文件中引用此文件的路径
-                            outputPath: './images', //输出目录--相对于打包文件夹目录，当前是相对 dist 文件夹
-                            useRelativePath: true
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.(ttf|eot|woff|woff2|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name]_[hash:6].[ext]',
-                            publicPath: './dist/fonts', //发布目录路径--其实就是打包文件中引用此文件的路径
-                            outputPath: './fonts' //输出目录--相对于打包文件夹目录，当前是相对 dist 文件夹
-                        }
-                    }
-                ]
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader','css-loader']
-            }
-        ]
-    },
-    output: {
-        filename: './js/[name].bundle.js',
-    }
-}
-```
-index.js
-```
-// import img from './logo@2x.png';
-const img = require('../images/logo@2x.png');
-import '../fonts/iconfont.css';
+## c4: url-loader
+和`file-loader`相似 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c4)
 
-console.log(img);
+## c5: css-loader
+`css`处理 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c5)
+## c6: sass-loader
+`scss`处理 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c6)
 
-var root = document.getElementById('root');
-var img_ = new Image();
-img_.src = img;
-img_.onload = function() {
-    root.appendChild(img_);
-}
-```
-index.html
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head>
-<body>
-    <div id="root"></div>
-    <div class="img"></div>
-    <i class="iconfont icon-file"></i>
-    <script src="./dist/js/index.bundle.js"></script>
-</body>
-</html>
-```
+## c7: postcss-loader
+`css前缀兼容` [源码](https://github.com/dongwudi/webpack-demo/tree/master/c7)
+
+## c8 html-webpack-plugin
+`html-webpack-plugin`打包目录自动生成html文件 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c8)
+
+## c9 clean-webpack-plugin
+`clean-webpack-plugin`打包时自动清理打包目录 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c9)
+
+## c10 sourcemap
+调试代码。开发环境:`cheap-eval-source-map`,生产环境:不使用或`source-map` [源码](https://github.com/dongwudi/webpack-demo/tree/master/c10)
+
+## c11 devServer
+启动本地服务器`webpack-dev-server` [源码](https://github.com/dongwudi/webpack-demo/tree/master/c11)

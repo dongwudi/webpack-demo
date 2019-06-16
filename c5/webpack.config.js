@@ -11,11 +11,12 @@ module.exports = {
                 test: /\.(png|jpg|gif)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
                             name: '[name]_[hash:6].[ext]',
                             publicPath: './dist/images', //发布目录路径--其实就是打包文件中引用此文件的路径
-                            outputPath: './images' //输出目录--相对于打包文件夹目录，当前是相对 dist 文件夹
+                            outputPath: './images', //输出目录--相对于打包文件夹目录，当前是相对 dist 文件夹
+                            limit: 1024 * 5 //文件大小（单位 byte）低于指定的限制时，可以返回一个 DataURL
                         }
                     }
                 ]
@@ -24,7 +25,7 @@ module.exports = {
                 test: /\.(ttf|eot|woff|woff2|svg)$/,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
                             name: '[name]_[hash:6].[ext]',
                             publicPath: './dist/fonts', //发布目录路径--其实就是打包文件中引用此文件的路径
