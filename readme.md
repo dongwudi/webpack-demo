@@ -52,3 +52,9 @@ $ npm run dev
 
 ## c12 babal-loader
 `babel`处理es6 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c12)
+
+## c13 tree shaking
+用于描述移除 JavaScript 上下文中的未引用代码(dead-code)。它依赖于 ES2015 模块系统中的静态结构特性，例如 import 和 export; [源码](https://github.com/dongwudi/webpack-demo/tree/master/c13)
+
+## c14 webpack-merge
+分离开发，生产环境webpack配置代码。[源码](https://github.com/dongwudi/webpack-demo/tree/master/c14)
