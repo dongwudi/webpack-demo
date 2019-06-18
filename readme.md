@@ -65,3 +65,13 @@ $ npm run dev
 * 异步代码：安装`@babel/plugin-syntax-dynamic-import`并在`.babelrc`的`plugins`配置 ,配置`optimization`
 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c15)
 
+## c16 懒加载
+`import` `async` `await` [源码](https://github.com/dongwudi/webpack-demo/tree/master/c16)
+
+## c17 打包分析
+
+[官方github地址](https://github.com/webpack/analyse) [源码](https://github.com/dongwudi/webpack-demo/tree/master/c17)
+
+## c18 code split: Prefetching/Preloading 
+* prefetch: 未来空闲自动加载
+* preload: 和主模块并行加载（测试时发现并不会加载，点击后才开始加载。。不知道哪里问题）
