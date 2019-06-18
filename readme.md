@@ -58,3 +58,10 @@ $ npm run dev
 
 ## c14 webpack-merge
 分离开发，生产环境webpack配置代码。[源码](https://github.com/dongwudi/webpack-demo/tree/master/c14)
+
+## c15 code split
+代码分割两种方式：
+* 同步代码：`webpack`配置`optimization`
+* 异步代码：安装`@babel/plugin-syntax-dynamic-import`并在`.babelrc`的`plugins`配置 ,配置`optimization`
+[源码](https://github.com/dongwudi/webpack-demo/tree/master/c15)
+
