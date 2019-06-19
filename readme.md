@@ -74,4 +74,15 @@ $ npm run dev
 
 ## c18 code split: Prefetching/Preloading 
 * prefetch: 未来空闲自动加载
-* preload: 和主模块并行加载（测试时发现并不会加载，点击后才开始加载。。不知道哪里问题）
+* preload: 和主模块并行加载（测试时发现并不会加载，点击后才开始加载。。不知道哪里问题）  
+[源码](https://github.com/dongwudi/webpack-demo/tree/master/c18)  
+
+## c19 MiniCssExtractPlugin
+css分离，压缩合并 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c19)  
+
+## c20 contenthash
+`contenthash`解决缓存 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c20)  
+
+## c21 webpack.ProvidePlugin
+`ProvidePlugin`自动加载 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c21)  
+
