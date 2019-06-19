@@ -86,3 +86,5 @@ css分离，压缩合并 [源码](https://github.com/dongwudi/webpack-demo/tree/
 ## c21 webpack.ProvidePlugin
 `ProvidePlugin`自动加载 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c21)  
 
+## c22 library打包
+[源码](https://github.com/dongwudi/webpack-demo/tree/master/c22)  
