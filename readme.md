@@ -87,4 +87,7 @@ css分离，压缩合并 [源码](https://github.com/dongwudi/webpack-demo/tree/
 `ProvidePlugin`自动加载 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c21)  
 
 ## c22 library打包
-[源码](https://github.com/dongwudi/webpack-demo/tree/master/c22)  
+`externals` 忽略打包 [源码](https://github.com/dongwudi/webpack-demo/tree/master/c22)  
+
+## c23 离线缓存
+[源码](https://github.com/dongwudi/webpack-demo/tree/master/c23) 
